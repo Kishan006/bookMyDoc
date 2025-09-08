@@ -14,9 +14,14 @@ const port = process.env.PORT || 4000
 connectDB()
 connectCloudinary()
 
-// middlewares
+// middlewares (fixed)
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: [
+    "https://bookmydocfrontend.netlify.app/"
+  ],
+  credentials: true
+}));
 
 // api endpoints
 app.use("/api/user", userRouter)
