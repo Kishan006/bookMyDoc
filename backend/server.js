@@ -18,7 +18,7 @@ connectCloudinary()
 app.use(express.json())
 app.use(cors({
   origin: [
-    "https://bookmydocfrontend.netlify.app/"
+    "https://bookmydocfrontend.netlify.app"
   ],
   credentials: true
 }));
